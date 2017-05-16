@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h3> Table of Contents </h1>
+          <ul>
+            <li>Algorithm Complexity </li>
+            <li>AI Solving Complex Problems</li>
+          </ul>
+        </section>
+				<section>
+          <section>
+            <h3> Algorithm Complexity </h3>
+            <ul>
+              <li> How to measure the performance of a program?</li>
+              <li> Remove the hardware variable when comparing algorithms </li>
+              <li> Different purpose than profilers </li>
+            </ul>
+
+            <pre><code>
+          max = 0
+          array.each do |item|
+            if item >= max
+              max = item
+            end
+          end
+            </code></pre>
+          </section>
+          <section>
+            <p>
+            Big O specifically describes the worst-case scenario, and can be used to describe the execution time required.
+            </p>
+            <ul>
+              <li>
+                O(1) executes in the same time (or space) regardless of the size of the input data set.
+              </li>
+              <li>
+                O(N) performance will grow linearly and in direct proportion to the size of the input data set
+              </li>
+              <li>
+                ....
+              </li>
+              <li>
+                ....
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>
+            Common Algorithms
+            </h3>
+            <ul>
+             <li>
+               Max number: O(n)
+             </li>
+             <li>
+               Binary search number in ordered array: O(log n)
+             </li>
+             <li>
+               Bubble Sort О(n2)
+             </li>
+             <li>
+               Find all paths in a graph ?
+             </li>
+             <li>
+               Find shortest path in graph ?
+             </li>
+             <li>
+               Find the best decision on a Decision Tree for Chess?
+             </li>
+            </ul>
+
+
+          </section>
+
+          <section>
+            Off-topic reads:
+            <p>BFS - https://en.wikipedia.org/wiki/Breadth-first_search</p>
+            <p>DFS - https://en.wikipedia.org/wiki/Depth-first_search</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>AI Solving Complex Problems </h2>
+
+          <p>
+              Create intelligent agents capable of reading their environment to find a "good enough" solution
+          </p>
+
+        </section>
+        <section>
+          <section>
+            <h2>Machine Learning </h2>
+            <quote>
+            Machine Learning is a science of getting computers to learn without being explicitly programmed
+            </quote>
+          </section>
+
+          <section>
+            <h2>Categories</h1>
+            <ul>
+              <li>
+                Supervised Learning
+              </li>
+              <li>
+                Unsupervised Learning
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2> More Categories</h2>
+            <ul>
+              <li>
+                Continuous Values
+              </li>
+              <ul>
+              <li>
+                Single Variable
+              </li>
+              <ul>
+                <li>
+                  Linear Regression:
+                  <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Linear_regression.svg/400px-Linear_regression.svg.png">
+                    Image </a>
+                </li>
+              </ul>
+
+              <li>
+                Multi Variable
+              </li>
+              <li>
+                Clustering:
+                  <a href="https://nelsonslog.files.wordpress.com/2015/09/screen-shot-2015-09-04-at-3-29-05-pm.png">
+                    Image </a>
+              </li>
+              </ul>
+              <li>
+                Discrete
+                <ul>
+                  <li> Binary Clasification </li>
+                  <li> Multi class Classification </li>
+                  <ul>
+                    <li>One vs All</li>
+                  </ul>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+          <h2> Amazon Machine Learning </h2>
+          </section>
+          <section>
+            <h3> Step 1: Prepare data </h3>
+            <ul>
+              <li>
+                Target Variable
+              </li>
+              <li>
+                Normalizing Data
+              </li>
+              <li>
+                CSV File in S3 bucket or Amazon Redshift
+              </li>
+              <ul>
+          </section>
+          <section>
+            <h3> Step 2: Create Machine Learning Model </h3>
+            <ul>
+              <li>
+                Define Schema
+              </li>
+              <li>
+                Score ( binary classification only)
+              </li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>
+            3. Review and evaluate model
+              </li>
+              <li>
+            4. Enable API
+              </li>
+              <li>
+            5. Consume predictions
+            <a href="http://docs.aws.amazon.com/machine-learning/latest/APIReference/API_Predict.html">
+                    API </a>:
+
+              </li>
+
+            </ul>
+          </section>
+          </section>
+        </section>
+        <section>
+          <h3>Resources</h3>
+          <ul>
+          http://discrete.gr/complexity/
+          </ul>
+          <ul>
+          https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
+          </ul>
+          <ul>
+          https://en.wikipedia.org/wiki/NP_(complexity)
+          </ul>
+          https://en.wikipedia.org/wiki/Artificial_intelligence
+          <ul>
+          http://whatis.techtarget.com/definition/machine-learning
+          </ul>
+          <ul>
+          https://www.coursera.org/learn/machine-learning/lecture/zcAuT/welcome-to-machine-learning
+          </ul>
+          <ul>
+          http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
+          </ul>
+          <ul>
+            http://docs.aws.amazon.com/machine-learning/latest/dg/tutorial.html
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
+Reveal.initialize({
+  dependencies: [
+  { src: 'plugin/markdown/marked.js' },
+  { src: 'plugin/markdown/markdown.js' },
+  { src: 'plugin/notes/notes.js', async: true },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  ]
+});
+    </script>
+  </body>
+</html>
